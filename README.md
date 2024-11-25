@@ -58,6 +58,4 @@ npm run build
 5. **Open the Project Folder**
 Open the project folder in your code editor and ensure the build process is complete. Then, open the `index.html` file.
 
-## Some snapshot
-1.**
-![github.com/abutalha373](https://raw.githubusercontent.com/abutalha373/store-sources-to-share-the-raw-link/main/property%20management%20dashboard/Screenshot%20(3).png)
+
