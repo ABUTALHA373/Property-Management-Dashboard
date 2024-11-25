@@ -4,7 +4,7 @@
 
 ## Live Preview
 Check out the live website here:  
-**[https://talha373.netlify.app](https://pmdashboard.netlify.app/)**
+**[https://pmdashboard.netlify.app](https://pmdashboard.netlify.app/)**
 
 an and optimized code for fast-loading
 
