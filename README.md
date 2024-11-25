@@ -28,9 +28,10 @@ Follow these steps to set up and run the Property Management Dashboard on your l
 - **Node.js**: Required to run npm commands. Install from [Node.js official website](https://nodejs.org/).
 - **Tailwind CSS**: The project uses Tailwind CSS, so it needs to be built before running.
 
-### Steps
+### Steps 
+**It is possible to run by opening the `index.html` file(if the tailwind CSS build is fine).
 
-1. **Clone the Repository**
+1. **Clone the Repository** 
 Clone this repository to your local machine using Git:
 ```bash
 git clone https://github.com/talha373/property-management-dashboard.git
@@ -56,3 +57,7 @@ npm run build
 
 5. **Open the Project Folder**
 Open the project folder in your code editor and ensure the build process is complete. Then, open the `index.html` file.
+
+## Some snapshot
+1.**
+![github.com/abutalha373](https://raw.githubusercontent.com/abutalha373/property%20management%20dashboard/Screenshot%20(3).png)
