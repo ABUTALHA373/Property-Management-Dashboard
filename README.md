@@ -29,7 +29,7 @@ Follow these steps to set up and run the Property Management Dashboard on your l
 - **Tailwind CSS**: The project uses Tailwind CSS, so it needs to be built before running.
 
 ### Steps 
-**It is possible to run by opening the `index.html` file(if the tailwind CSS build is fine).
+**It is possible to run the project by opening the `index.html` file directly after cloning the repository (if the tailwind CSS build is fine).**
 
 1. **Clone the Repository** 
 Clone this repository to your local machine using Git:
