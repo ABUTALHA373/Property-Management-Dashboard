@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 
-@layer base {
   *{
     @apply text-light-text-primary dark:text-dark-text-primary;
   }
@@ -15,13 +14,57 @@
     @apply px-3 py-1 rounded-full border outline-none;
   }
   .btn-primary{
-    @apply bg-primary border-primary text-white font-semibold hover:bg-rose-700;
+    @apply bg-primary border-primary text-white font-semibold hover:bg-green-700;
   }
   .btn-secondary{
-    @apply bg-primary/10 border-primary text-primary dark:text-white font-semibold hover:bg-gray-100;
+    @apply bg-primary/10 border-primary text-primary dark:text-white font-semibold hover:bg-dark-primary/10;
   }
   .btn-tartiary{
     @apply bg-light-primary dark:bg-dark-primary border border-light-border dark:border-dark-border text-light-text-secondary dark:text-dark-text-secondary font-semibold hover:bg-gray-100;
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
+
+::-webkit-scrollbar-thumb {
+    @apply bg-neutral-500;
+    border-radius: 10px;
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #737373 transparent;
+}
+
+/*air datepicker*/
+.air-datepicker {
+    @apply border border-light-border dark:border-dark-border !important;
+}
+
+.air-datepicker-nav {
+    @apply border-b border-light-border dark:border-dark-border !important;
+}
+
+.air-datepicker--pointer::after {
+    @apply border-t border-l border-light-border dark:border-dark-border !important;
+}
+
+.air-datepicker,
+.air-datepicker-nav,
+.air-datepicker--navigation,
+.air-datepicker--content,
+.air-datepicker--pointer::after {
+    @apply bg-light-secondary dark:bg-dark-secondary text-light-text-primary dark:text-dark-text-primary !important
+}
+
+.air-datepicker-nav--title,
+.air-datepicker-cell,
+.air-datepicker-nav--action {
+    @apply hover:bg-neutral-100 dark:hover:bg-gray-800 !important;
+}
+
+
+/*air datepicker*/
+
 

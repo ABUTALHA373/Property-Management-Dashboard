@@ -23,17 +23,17 @@ module.exports = {
         sans: "Figtree"
       },
       colors: {
-        'primary': '#e11d48',
+        'primary': '#16a34a',
 
         'light-primary': '#f5f5f5',
         'light-secondary': '#ffffff',
         'dark-primary': '#0f111a',
         'dark-secondary': '#141824',
 
-        'light-hover': '#d4d4d4',
+        'light-hover': '#bbf7d0',
         'dark-hover': '#1f2937',
 
-        'light-active': '#e5e5e5',
+        'light-active': '#dcfce7',
         'dark-active': '#334155',
 
         'light-border': '#d4d4d4',

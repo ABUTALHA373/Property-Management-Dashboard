@@ -1,20 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/css/output.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/css/output.css" rel="stylesheet" />
 </head>
 
 <body>
     <nav
-        class="sticky top-0 bg-light-secondary dark:bg-dark-secondary border-b border-light-border dark:border-dark-border">
+        class="sticky top-0 bg-light-secondary dark:bg-dark-secondary border-b border-light-border dark:border-dark-border z-30">
         <div class="mx-auto px-2 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <!-- logo  -->
                 <div class="flex shrink-0 items-center">
-                    <img class="h-8 w-auto object-cover" src="./src/images/logo.png" alt="Your Company">
+                    <svg class="size-8 object-cover fill-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M4 4a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2v14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2V5a1 1 0 0 1-1-1Zm5 2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1Zm-5 4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H9Zm5 0a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-1Zm-3 4a2 2 0 0 0-2 2v3h2v-3h2v3h2v-3a2 2 0 0 0-2-2h-2Z"
+                            clip-rule="evenodd" />
+                    </svg>
                 </div>
                 <!-- nav menu  -->
                 <div class="hidden md:ml-6 md:block">
@@ -26,8 +31,7 @@
                             class="rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover relative">Inbox
 
                             <span
-                                class="absolute top-0 left-12 text-[0.60rem] leading-[0.80rem] font-medium px-0.5 rounded bg-rose-600 text-white dark:text-white">6</span>
-
+                                class="absolute top-0 left-12 text-[0.60rem] leading-[0.80rem] font-medium px-0.5 rounded bg-primary text-white dark:text-white">6</span>
                         </a>
                         <a href="#"
                             class="rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover">Calendar</a>
@@ -35,30 +39,28 @@
                             class="rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover">Insight</a>
                         <a href="#"
                             class="rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover">Listing</a>
-
                     </div>
                 </div>
                 <!-- search, notification, profile, hamburger Icon -->
                 <div class="flex gap-1 items-center">
                     <!-- search button -->
-                    <button type="button" class="hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded-md">
+                    <!-- <button type="button" class="hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor"
                             class="size-5 dark:stroke-dark-text-secondary stroke-light-text-secondary">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
-
-                    </button>
+                    </button> -->
                     <!-- notification button -->
-                    <button type="button" class="hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded-md">
+                    <button type="button" class="hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded-md"
+                        id="notification-button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor"
                             class="size-5 dark:stroke-dark-text-secondary stroke-light-text-secondary">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                         </svg>
-
                     </button>
                     <!-- theme button-->
                     <div class="flex items-center hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded-md"
@@ -80,18 +82,41 @@
                     <button type="button" class="size-8 ml-1 flex rounded-full overflow-hidden" id="profile-button">
                         <img class="object-cover"
                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="">
+                            alt="" />
                     </button>
+                    <!-- Notification -->
+                    <div class="hidden absolute top-16 right-16 z-10 mt-2 w-56 rounded-md bg-light-secondary dark:bg-dark-secondary border border-light-border dark:border-dark-border py-1 divide-y divide-light-border dark:divide-dark-border"
+                        id="notification-menu">
+                        <a href="#"
+                            class="block px-4 py-2 text-xs bg-light-active/30 dark:bg-dark-active/30 dark:hover:bg-dark-hover"
+                            id="user-menu-item-0">Notifications for new payments
+                            received</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-xs bg-light-active/30 dark:bg-dark-active/30 dark:hover:bg-dark-hover"
+                            id="user-menu-item-1">Payment of $500 received for booking at
+                            Beachside Villa.</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-xs bg-light-active/30 dark:bg-dark-active/30 dark:hover:bg-dark-hover"
+                            id="user-menu-item-2">Guest check-in at Lakeside Cottage at
+                            3:00 PM today</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-xs text-light-text-secondary dark:text-dark-text-secondary bg-light-active/30 dark:bg-dark-active/30 dark:hover:bg-dark-hover"
+                            id="user-menu-item-0">Notifications for new payments
+                            received</a>
+                        <a href="#"
+                            class="block px-4 py-2 text-xs text-light-text-secondary dark:text-dark-text-secondary bg-light-active/30 dark:bg-dark-active/30 dark:hover:bg-dark-hover"
+                            id="user-menu-item-1">Payment of $500 received for booking at
+                            Beachside Villa.</a>
+                    </div>
                     <!-- profile dropdown menu -->
                     <div class="hidden absolute top-16 right-8 z-10 mt-2 w-44 rounded-md bg-light-secondary dark:bg-dark-secondary border border-light-border dark:border-dark-border py-1"
                         id="profile-menu">
-                        <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
                         <a href="#" class="block px-4 py-2 text-sm hover:bg-light-hover dark:hover:bg-dark-hover"
-                            role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                            id="user-menu-item-0">Your Profile</a>
                         <a href="#" class="block px-4 py-2 text-sm hover:bg-light-hover dark:hover:bg-dark-hover"
-                            role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                            id="user-menu-item-1">Settings</a>
                         <a href="#" class="block px-4 py-2 text-sm hover:bg-light-hover dark:hover:bg-dark-hover"
-                            role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            id="user-menu-item-2">Sign out</a>
                     </div>
                     <!-- Mobile menu button(hamburger menu)-->
                     <div class="flex items-center md:hidden ml-3 hover:bg-light-hover dark:hover:bg-dark-hover p-1 rounded"
@@ -123,7 +148,7 @@
                 <a href="#"
                     class="block relative rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover">Inbox
                     <span
-                        class="absolute top-0 left-12 text-[0.60rem] leading-[0.80rem] font-medium px-0.5 rounded bg-rose-600 text-white dark:text-white">6</span>
+                        class="absolute top-0 left-12 text-[0.60rem] leading-[0.80rem] font-medium px-0.5 rounded bg-primary text-white dark:text-white">6</span>
                 </a>
                 <a href="#"
                     class="block rounded-md px-3 py-2 text-sm font-medium text-light-text-primary dark:text-dark-text-primary hover:bg-light-hover dark:hover:bg-dark-hover">Calendar</a>
@@ -135,66 +160,78 @@
         </div>
     </nav>
     <main class="container pt-6">
-        <section class="py-3 grid sm:grid-cols-2 gap-4">
-            <div class="grid grid-cols-[4rem_auto] items-center justify-center md:justify-start">
-                <div class="size-12 ml-1 flex rounded-full overflow-hidden">
-                    <img class="object-cover"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="">
+        <!-- Greeting section  -->
+        <section>
+            <div
+                class="py-3 grid md:grid-cols-2 gap-4 p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md">
+                <div class="grid grid-cols-[4rem_auto] items-center justify-center md:justify-start">
+                    <div class="size-12 ml-1 flex rounded-full overflow-hidden">
+                        <img class="object-cover"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="" />
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">Good Morning</h1>
+                        <h6 class="text-xs">Here's an overview of your properties.</h6>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="text-3xl font-bold">Good Morning</h1>
-                    <h6 class="text-xs">Here's an overview of your properties.</h6>
+                <div class="flex items-center justify-center md:justify-end">
+                    <select
+                        class="px-3 py-1 rounded-full border border-light-border dark:border-dark-border outline-none bg-light-secondary dark:bg-dark-secondary text-light-text-primary dark:text-dark-text-primary w-32">
+                        <option selected>Last Month</option>
+                        <option>2 Months</option>
+                        <option>3 Months</option>
+                    </select>
+                    <button class="btn btn-primary ml-3 w-32 text-light-secondary">Analytics</button>
                 </div>
-            </div>
-            <div class="flex items-end justify-center md:justify-end">
-                <select
-                    class="px-3 py-1 rounded-full border border-light-border dark:border-dark-border outline-none bg-light-primary dark:bg-dark-primary text-light-text-primary dark:text-dark-text-primary w-32">
-                    <option selected>Last Month</option>
-                    <option>2 Months</option>
-                    <option>3 Months</option>
-                </select>
-                <button class="btn btn-primary ml-3 w-32">Analytics</button>
             </div>
         </section>
+
+        <!-- Stats section  -->
         <section class="py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             <!-- Check'ins  -->
-            <div class="p-4 border border-light-border dark:border-dark-border rounded-md group">
+            <div
+                class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
                 <div class="grid grid-cols-[auto_2rem]">
                     <p class="text-sm">Check'ins</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-7 dark:fill-dark-text-secondary fill-light-text-secondary group-hover:fill-primary duration-200">
+                        class="size-7 fill-primary">
                         <path fill-rule="evenodd"
                             d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
                             clip-rule="evenodd" />
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold group-hover:text-primary duration-200">12</h2>
+                    <h2 class="text-2xl font-bold" id="check'ins">
+                        12
+                    </h2>
                 </div>
             </div>
             <!-- Check'outs -->
-            <div class="p-4 border border-light-border dark:border-dark-border rounded-md group">
+            <div
+                class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
                 <div class="grid grid-cols-[auto_2rem]">
                     <p class="text-sm">Check'outs</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-7 dark:fill-dark-text-secondary fill-light-text-secondary group-hover:fill-primary duration-200">
+                        class="size-7 fill-primary">
                         <path fill-rule="evenodd"
                             d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
                             clip-rule="evenodd" />
                     </svg>
-
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold group-hover:text-primary duration-200">32</h2>
+                    <h2 class="text-2xl font-bold">
+                        32
+                    </h2>
                 </div>
             </div>
             <!-- Earnings -->
-            <div class="p-4 border border-light-border dark:border-dark-border rounded-md group">
+            <div
+                class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
                 <div class="grid grid-cols-[auto_2rem]">
                     <p class="text-sm">Earnings</p>
-                    <svg class="size-7 dark:fill-dark-text-secondary fill-light-text-secondary group-hover:fill-primary duration-200"
-                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="size-7 fill-primary" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M12 14a3 3 0 0 1 3-3h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-4a3 3 0 0 1-3-3Zm3-1a1 1 0 1 0 0 2h4v-2h-4Z"
                             clip-rule="evenodd" />
@@ -202,65 +239,461 @@
                             d="M12.293 3.293a1 1 0 0 1 1.414 0L16.414 6h-2.828l-1.293-1.293a1 1 0 0 1 0-1.414ZM12.414 6 9.707 3.293a1 1 0 0 0-1.414 0L5.586 6h6.828ZM4.586 7l-.056.055A2 2 0 0 0 3 9v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2h-4a5 5 0 0 1 0-10h4a2 2 0 0 0-1.53-1.945L17.414 7H4.586Z"
                             clip-rule="evenodd" />
                     </svg>
-
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold group-hover:text-primary duration-200"><span
-                            class="text-xs text-light-text-secondary dark:text-dark-text-secondary">$</span>4.923<span
+                    <h2 class="text-2xl font-bold">
+                        <span class="text-xs text-light-text-secondary dark:text-dark-text-secondary">$</span>4.923<span
                             class="text-xs text-light-text-secondary dark:text-dark-text-secondary">,68</span>
                     </h2>
                 </div>
             </div>
             <!-- Reviews -->
-            <div class="p-4 border border-light-border dark:border-dark-border rounded-md group">
+            <div
+                class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
                 <div class="grid grid-cols-[auto_2rem]">
                     <p class="text-sm">Reviews</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-7 dark:fill-dark-text-secondary fill-light-text-secondary group-hover:fill-primary duration-200">
+                        class="size-7 fill-primary">
                         <path fill-rule="evenodd"
                             d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
                             clip-rule="evenodd" />
                     </svg>
-
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold group-hover:text-primary duration-200">4.5<span
-                            class="text-xs text-light-text-secondary dark:text-dark-text-secondary">(1400)</span></h2>
+                    <h2 class="text-2xl font-bold">
+                        4.5<span class="text-xs text-light-text-secondary dark:text-dark-text-secondary">(1400)</span>
+                    </h2>
                 </div>
             </div>
         </section>
-        <section class="py-3 grid grid-cols-1 lg:grid-cols-6 gap-3">
-            <div class="lg:col-span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quisquam minus,
-                maxime atque dolor officiis fuga molestiae ipsa, incidunt distinctio aut corporis amet cum accusantium
-                provident nobis tenetur molestias perferendis explicabo, optio omnis. Cum aspernatur optio expedita sit
-                voluptatibus inventore aliquid sunt dolorem possimus temporibus distinctio mollitia amet dolores eveniet
-                quae placeat, maiores sapiente necessitatibus fugit nisi. Animi debitis ab temporibus repellat dolorum
-                id, nisi deserunt. Dolorum commodi necessitatibus quas saepe atque dignissimos amet, provident dolore ab
-                consequuntur inventore quos voluptatum ipsum! Suscipit autem placeat dolor vero officiis! Assumenda id
-                sit asperiores, molestias repudiandae, veritatis voluptatem est ipsa, doloremque amet quisquam porro
-                similique. Impedit quia ratione modi animi mollitia, repudiandae officiis. Aliquam aspernatur ducimus
-                nesciunt exercitationem. Provident, neque! Mollitia esse magni nisi ut, numquam in vero quas corporis,
-                recusandae, reiciendis error quos dicta laboriosam. Veritatis praesentium sit ipsam consequuntur
-                corporis saepe modi, aliquid dicta incidunt. Quia deserunt ullam provident ipsa sed quasi vero,
-                repudiandae assumenda veritatis quas corporis dolorem. Iusto ducimus consectetur atque voluptatum
-                perspiciatis quaerat. Qui asperiores illo corrupti totam quidem architecto dolore molestias ducimus, sit
-                rem cupiditate nostrum id natus explicabo similique quam? Assumenda rerum maiores, similique quas ipsa
-                atque hic doloribus veniam. Possimus accusantium nemo eveniet eos!</div>
-            <div class="lg:col-span-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nisi dicta ea,
-                blanditiis ut atque
-                sint eaque amet! Nam similique ex cum, sunt beatae fugit repudiandae, nulla blanditiis reiciendis
-                eligendi enim nesciunt ab! Aspernatur sapiente quis pariatur? Incidunt cupiditate minus, accusantium a,
-                iusto, molestiae labore laudantium nulla quae et iure unde eos cumque quas. A quas at molestiae ut,
-                sequi illo aperiam odio nisi tenetur, optio necessitatibus? Aliquid earum unde et ipsam, ipsum aut,
-                perspiciatis atque commodi illo quos enim nam, impedit tempora. Maxime harum repudiandae beatae facere
-                quam perspiciatis laborum nulla, impedit, molestiae vel explicabo aut veniam deserunt quod.</div>
+
+        <!--  -->
+        <section class="py-3 grid grid-cols-1 lg:grid-cols-6 gap-4">
+            <!-- Action items -->
+            <div class="lg:col-span-4 order-2 lg:order-1">
+                <!-- Your next step  -->
+                <div>
+                    <h3 class="text-xl py-2 font-bold relative">Your Next Steps</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <!-- Check'ins  -->
+                        <div
+                            class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
+                            <div>
+                                <div class="size-8 rounded-full p-2 bg-green-600/20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-alert-circle stroke-green-600">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="text-xs">Setup your calendar</p>
+                                <div class="grid grid-cols-2 gap-1 mt-2 items-center">
+                                    <div
+                                        class="w-full rounded-full h-1.5 overflow-hidden bg-green-100 dark:bg-dark-hover">
+                                        <div class="bg-green-600 h-1.5 rounded-full" style="width: 66%"></div>
+                                    </div>
+                                    <p class="text-[0.6rem]">4/6</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Increase your booking -->
+                        <div
+                            class="p-4 border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md group">
+                            <div class="grid grid-cols-[auto_2rem]">
+                                <div class="size-8 rounded-full p-2 bg-blue-600/20">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-activity stroke-blue-600">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="text-xs">Increase your booking</p>
+                                <div class="grid grid-cols-2 gap-1 mt-2 items-center">
+                                    <div
+                                        class="w-full rounded-full h-1.5 overflow-hidden bg-blue-100 dark:bg-dark-hover">
+                                        <div class="bg-blue-600 h-1.5 rounded-full" style="width: 33%"></div>
+                                    </div>
+                                    <p class="text-[0.6rem]">2/6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Properties  -->
+                <div class="mt-3 ">
+                    <div class="grid sm:grid-cols-2 items-center justify-between">
+                        <h3 class="text-xl py-2 font-bold relative">Properties</h3>
+                        <div class="flex gap-1 items-center justify-end">
+                            <select
+                                class="px-3 py-1 rounded-full border border-light-border dark:border-dark-border outline-none bg-light-secondary dark:bg-dark-secondary text-light-text-primary dark:text-dark-text-primary w-40"
+                                id="properties-filter">
+                                <option value="all">All</option>
+                                <option value="checked-in">Checked In</option>
+                                <option value="checked-out">Checked Out</option>
+                            </select>
+                            <button class="btn btn-primary ml-3 w-32 flex items-center " id="button-add-property">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="size-4 stroke-light-secondary">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg><span class="ml-2 text-light-secondary">Add New</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-2 p-3 bg-light-secondary dark:bg-dark-secondary border border-light-border dark:border-dark-border overflow-hidden  overflow-x-scroll">
+                        <table class="min-w-[44rem] w-full flex-shrink">
+                            <thead>
+                                <tr
+                                    class="bg-light-primary dark:bg-dark-primary border-b border-light-border dark:border-dark-border py-1 text-left">
+                                    <th class="p-1">P. Name</th>
+                                    <th class="p-1">Price</th>
+                                    <th class="p-1">Review</th>
+                                    <th class="p-1">Status</th>
+                                    <th class="p-1">Check In</th>
+                                    <th class="p-1">Check Out</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body-properties">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- New activity -->
+            <div class="lg:col-span-2 order-1 lg:order-2">
+                <h3 class="text-xl py-2 font-bold relative">
+                    New Activity
+                    <span
+                        class="absolute top-2 left-32 text-xs font-medium size-2 rounded-full bg-primary text-white dark:text-white"></span>
+                </h3>
+                <div
+                    class="border bg-light-secondary dark:bg-dark-secondary border-light-border dark:border-dark-border rounded-md divide-y  divide-light-border dark:divide-dark-border">
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">9</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Pet Friendlies</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">3 hours ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">405/A, 5th floor,
+                                    Mirpur, Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-blue-100 dark:bg-blue-100/20 text-blue-800 dark:text-blue-400 border-blue-400">Question</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">9</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Water Issue</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">5 hours ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">102/A,3rd floor
+                                    Mirpur ,
+                                    Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-yellow-100 dark:bg-yellow-100/20 text-yellow-800 dark:text-yellow-400 border-yellow-400">Damage
+                                Report</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">8</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Invoice Inquiry</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">15 hours
+                                    ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">18/C, 3rd floor,
+                                    Mirpur, Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-green-100 dark:bg-green-100/20 text-green-800 dark:text-green-400 border-green-400">Request</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">7</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Water Issue</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">3 hours ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">56, 2nd floor,
+                                    Mirpur, Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-green-100 dark:bg-green-100/20 text-green-800 dark:text-green-400 border-green-400">Request</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">7</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Water Issue</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">5 hours ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">102/A,3rd floor
+                                    Mirpur ,
+                                    Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-yellow-100 dark:bg-yellow-100/20 text-yellow-800 dark:text-yellow-400 border-yellow-400">Damage
+                                Report</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- activity -->
+                    <div class="grid grid-cols-12 p-2 gap-1">
+                        <div class="col-span-2 p-2">
+                            <div
+                                class="max-w-10 text-center border border-light-active dark:border-dark-border rounded-md overflow-hidden">
+                                <p
+                                    class="text-[0.7rem] border-b border-light-active dark:border-dark-border bg-light-hover dark:bg-dark-hover">
+                                    Aug
+                                </p>
+                                <h3 class="text-lg font-semibold">7</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-9">
+                            <h1 class="text-base font-semibold">Invoice Inquiry</h1>
+                            <p class="text-[0.5rem]">
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">15 hours
+                                    ago</span>
+                                .
+                                <span class="text-light-text-secondary dark:text-dark-text-secondary">18/C, 3rd floor,
+                                    Mirpur, Dhaka</span>
+                            </p>
+                            <span
+                                class="text-[0.6rem] inline font-medium px-1 rounded border bg-green-100 dark:bg-green-100/20 text-green-800 dark:text-green-400 border-green-400">Request</span>
+                        </div>
+                        <div class="col-span-1">
+                            <a href="" class="inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-link-2 size-3 dark:stroke-dark-text-secondary stroke-light-text-secondary -rotate-45">
+                                    <path
+                                        d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                                    </path>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                <span
+                                    class="text-[0.7rem] leading-3 text-light-text-secondary dark:text-dark-text-secondary ml-0.5">2</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- modal section  -->
+    <!-- addNewProperty -->
+    <div class="hidden relative justify-center" id="modal-add-property">
+        <div class="fixed inset-0 z-50 overflow-y-auto ">
+            <div
+                class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0 bg-gray-800/80 dark:bg-gray-200/80">
+                <span class="hidden sm:inline-block sm:h-screen sm:align-middle" aria-hidden="true">&#8203;</span>
+                <div
+                    class="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-light-primary dark:bg-dark-primary rounded-lg shadow-xl sm:my-8 sm:w-full sm:max-w-sm sm:p-6 sm:align-middle">
+                    <h3 class="text-lg font-medium leading-6 text-gray-800 capitalize dark:text-white" id="modal-title">
+                        Add New Property
+                    </h3>
+                    <form class="mt-4" action="#">
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Property Name
+                        </label>
+                        <input type="text" name="property-name" id="property-name"
+                            class="block w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required />
+
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Check In Date
+                        </label>
+                        <input type="text" name="check-in-date" id="check-in-date"
+                            class="block date-picker-checkIN w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required />
+
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Check Out Date
+                        </label>
+                        <input type="text" name="check-out-date" id="check-out-date"
+                            class="block date-picker-checkOUT w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required />
+
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Booking Price
+                        </label>
+                        <input type="text" name="booking-price" id="booking-price"
+                            class="block w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required />
+
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Reviews
+                        </label>
+                        <input type="text" name="reviews" id="reviews"
+                            class="block w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required />
+                        <label class="text-sm text-light-text-primary dark:text-dark-text-primary">Status
+                        </label>
+                        <select type="text" name="status" id="status"
+                            class="block w-full px-3 py-2 bg-light-secondary dark:bg-dark-secondary text-sm border border-light-border dark:border-dark-border text-light-text-primary dark:text-dark-text-primary focus:border-primary outline-none  hover:ring-2 hover:ring-primary/40 rounded-md"
+                            required>
+                            <option value="checked-in">Checked In</option>
+                            <option value="checked-out">Checked Out</option>
+                        </select>
+
+                        <div class="mt-4 sm:flex sm:items-center sm:-mx-2 gap-2">
+                            <button type="button" class="w-full btn btn-secondary" id="cancel-modal-add-property">
+                                Cancel
+                            </button>
+
+                            <button type="button" class="w-full btn btn-primary" id="add-new-property">
+                                Add New
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jquery js  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="
+        https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js
+        "></script>
+    <link href="
+        https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css
+        " rel="stylesheet">
     <script src="./src/js/app.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
