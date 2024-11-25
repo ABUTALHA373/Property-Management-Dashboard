@@ -48,12 +48,12 @@ function showBodyProperty(selectedValue) {
         if (selectedValue == 'all') {
             return properties
         } else {
-            //check status and only return if match
+            //check status and only return if it matches
             return property.status == selectedValue;
         }
     });
     let show = '';
-    //calculate abv of all reviews
+    //calculate abg of all reviews
     for (let x of filteredProperties) {
         let review = 0;
         for (let a of x.reviews) {
@@ -133,6 +133,8 @@ document.getElementById('add-new-property').addEventListener('click', function (
     addNewProperty();
 });
 
+
+//date picker
 const localeEs = {
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
